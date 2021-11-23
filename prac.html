@@ -1,0 +1,86 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        .btn {
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+        .btn.btn-primary {
+            background-color: rgb(63, 126, 245);
+            color: #fff;
+        }
+        .btn.btn-danger {
+            background-color: rgb(255, 83, 83);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <button onclick="changeColor()">Toggle Button Color/Class</button>
+</div>
+<hr>
+div id="btn_groups">-->
+<button class="btn btn-primary">Button 1</button>
+<button class="btn btn-primary">Button 3</button>
+<button class="btn btn-danger">Button 2</button>
+<button class="btn btn-danger">Button 4</button>
+<button class="btn btn-danger">Button 6</button>
+<button class="btn btn-primary">Button 5</button>
+<button class="btn btn-primary">Button 7</button>
+<button class="btn btn-primary">Button 9</button>
+<button class="btn btn-danger">Button 8</button>
+<button class="btn btn-primary">Button 11</button>
+<button class="btn btn-danger">Button 10</button>
+<button class="btn btn-danger">Button 12</button>
+<!--</div>-->
+</body>
+
+<script>
+
+    //   const button = document.getElementById("btn_groups").children;
+    //   console.log(button);
+    //   //button.classList.add("btn-danger");
+    //   //console.log(button);
+    //
+    // function changeColor() {
+    //     const primary = document.getElementsByClassName("btn-primary");
+    //     console.log(primary);
+    //     const danger = document.getElementsByClassName("btn-danger");
+    //     console.log(danger);
+    //
+    //     (Object.values(primary)).forEach((element) =>
+    //     {
+    //         element.classList.replace("btn-primary", "btn-danger");
+    //         //element.classList.replace("btn-danger", "btn-primary");
+    //     });
+    //
+    //     (Object.values(danger)).forEach((element) =>
+    //     {
+    //         element.classList.replace("btn-danger", "btn-primary");
+    //     });
+    //     // primary.classList.replace("btn-primary", "btn-danger");
+    //     // primary.classList.replace("btn-danger", "btn-primary");
+    // }
+
+    function changeColor() {
+        const button = document.getElementsByClassName("btn");
+        console.log(button);
+        console.log(Object.values(button));
+        (Object.values(button)).forEach((elem) => {
+            if( button.classList === "btn-primary" ){
+
+            }
+        });
+    }
+
+
+</script>
+</html>

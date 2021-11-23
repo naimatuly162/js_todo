@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="name" onchange="upperCase()">
+
+<button id="mouseevent" >Button</button>
+<p id="para"></p>
+
+
+<div id="scroll">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my
+    mind ever since.
+    <br><br>
+    'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had
+    the advantages that you've had.'
+</div>
+<p id="para2"></p>
+
+<form action="" onsubmit="formSubmit()">
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+</form>
+
+
+<script>
+
+    //onchange event
+    function upperCase() {
+        const x = document.getElementById("name");
+        x.value = x.value.toUpperCase();
+    }
+
+    //onmouseover , onmouseout,
+    var mouseEvent = document.getElementById("mouseevent");
+    mouseEvent.addEventListener("mouseover", showText);
+    mouseEvent.addEventListener("mouseout", showText2);
+
+    mouseEvent.addEventListener("keypress", showText3);
+    mouseEvent.addEventListener("pointerout", showText4);
+
+
+    function showText() {
+        document.getElementById("para").innerHTML = "MouseOver";
+    }
+
+    function showText2() {
+        document.getElementById("para").innerHTML = "MouseOut";
+    }
+
+    function showText3() {
+        document.getElementById("para").innerHTML = "KeyPressed";
+    }
+
+    function showText4() {
+        console.log("Pointer Moved Out");
+    }
+
+    //blur Event
+    var blur = document.getElementById("name");
+    blur.addEventListener("blur", blurEvent)
+
+    function blurEvent() {
+        alert("input field lost focus");
+    }
+
+    //onscroll
+    var scrollEvent = document.getElementById("scroll");
+    scrollEvent.addEventListener("scroll", showText5);
+
+    function showText5() {
+        document.getElementById("para2").innerHTML = "Scrolled";
+    }
+
+    //onsubmit
+    function formSubmit() {
+        alert("Form Submitted");
+    }
+
+</script>
+
+</body>
+<style>
+    div {
+        border: 2px solid black;
+        width: 200px;
+        height: 100px;
+        overflow: scroll;
+    }
+</style>
+</html>

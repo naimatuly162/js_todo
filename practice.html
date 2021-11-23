@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+<div>
+    <input type="text" id="attribute_name" name="attribute_name" placeholder="Attribute Name">
+    <input type="text" id="attribute_value" name="attribute_value" placeholder="Attribute Value">
+    <button onclick="addAttribute(this)">Add Attribute</button>
+</div>
+
+<hr>
+
+<div id="btn_groups">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+    <button>Button 4</button>
+    <button>Button 5</button>
+    <button>Button 6</button>
+    <button>Button 7</button>
+    <button>Button 8</button>
+    <button>Button 9</button>
+    <button>Button 10</button>
+    <button>Button 11</button>
+    <button>Button 12</button>
+</div>
+</body>
+
+<script>
+    function addAttribute(event) {
+        const attribute_name = document.getElementById('attribute_name').value;
+        const attribute_value = document.getElementById('attribute_value').value;
+        console.log(event);
+        event.setAttribute(attribute_name, attribute_value);
+        console.log(event);
+
+        // Complete the body, this function will add an attribute to each button under button groups
+        // The attribute name & value will be generated from the input fields
+        // Ex: <button testing="something">Button 12</button>
+
+    }
+
+    // Write a function that shows the innerText of the button when a button is clicked
+
+    const children = Object.values(document.getElementById('btn_groups').children);
+    function showText(e) {
+        console.log(e.target.innerText);
+    }
+
+    children.forEach(element => {
+        element.addEventListener("click", showText);
+    });
+
+</script>
+</html>
